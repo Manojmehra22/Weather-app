@@ -69,3 +69,13 @@
   width: 30px;
   margin-top: 10px;
 }
+@media only screen and(max-width:600px) {
+  .app {
+    background-color: #a8e2ecf9;
+    max-width: fit-content;
+  }
+  .weather {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
