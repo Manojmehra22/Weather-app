@@ -72,7 +72,7 @@
 @media only screen and(max-width:600px) {
   .app {
     background-color: #a8e2ecf9;
-    max-width: fit-content;
+    max-width: 100%;
   }
   .weather {
     margin-left: 20px;
