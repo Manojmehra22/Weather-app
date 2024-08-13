@@ -66,41 +66,43 @@ function Weather() {
   }, []);
 
   return (
-    <div className="weather">
-      <div className="search-bar">
-        <input ref={inputRef} type="text" placeholder="Search" />
-        <img
-          className="search_icon"
-          src={searchh}
-          alt=""
-          onClick={() => search(inputRef.current.value)}
-        />
+    <div className="main-container">
+      <div className="weather">
+        <div className="search-bar">
+          <input ref={inputRef} type="text" placeholder="Search" />
+          <img
+            className="search_icon"
+            src={searchh}
+            alt=""
+            onClick={() => search(inputRef.current.value)}
+          />
+        </div>
+        {weatherData ? (
+          <>
+            <img src={weatherData.icon} alt="" className="weather-icon" />
+            <p className="tempreature">{weatherData.tempreature}°</p>
+            <p className="location">{weatherData.location}</p>
+            <div className="weather-data">
+              <div className="col">
+                <img className="humidity_icon" src={humidity1} alt="" />
+                <div>
+                  <p>{weatherData.humidity}%</p>
+                  <span>Humidity</span>
+                </div>
+              </div>
+              <div className="col">
+                <img className="wind_icon" src={wind} alt="" />
+                <div>
+                  <p>{weatherData.windSpeed}km/h</p>
+                  <span>Wind Speed</span>
+                </div>
+              </div>
+            </div>
+          </>
+        ) : (
+          <></>
+        )}
       </div>
-      {weatherData ? (
-        <>
-          <img src={weatherData.icon} alt="" className="weather-icon" />
-          <p className="tempreature">{weatherData.tempreature}°</p>
-          <p className="location">{weatherData.location}</p>
-          <div className="weather-data">
-            <div className="col">
-              <img className="humidity_icon" src={humidity1} alt="" />
-              <div>
-                <p>{weatherData.humidity}%</p>
-                <span>Humidity</span>
-              </div>
-            </div>
-            <div className="col">
-              <img className="wind_icon" src={wind} alt="" />
-              <div>
-                <p>{weatherData.windSpeed}km/h</p>
-                <span>Wind Speed</span>
-              </div>
-            </div>
-          </div>
-        </>
-      ) : (
-        <></>
-      )}
     </div>
   );
 }

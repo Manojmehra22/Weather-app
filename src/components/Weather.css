@@ -1,3 +1,12 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+
+  margin-top: 200px;
+
+  padding-bottom: 30px;
+}
 .weather {
   place-self: center;
   padding: 40px;
@@ -68,14 +77,4 @@
 .wind_icon {
   width: 30px;
   margin-top: 10px;
-}
-@media only screen and(max-width:600px) {
-  .app {
-    background-color: #a8e2ecf9;
-    max-width: 100%;
-  }
-  .weather {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
 }

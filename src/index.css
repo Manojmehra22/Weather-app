@@ -5,8 +5,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-.app {
-  min-height: 100vh;
-  display: grid;
-  background-color: #a8e2ecf9;
+body {
+  height: 100vh;
+  background: linear-gradient(#396c2f, #a3c664);
 }
