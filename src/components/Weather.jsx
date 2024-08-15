@@ -36,9 +36,8 @@ function Weather() {
       alert("please Enter City Name");
     }
     try {
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${
-        import.meta.env.VITE_APP_ID
-      }`;
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${import.meta.env.VITE_APP_ID
+        }`;
 
       const response = await fetch(url);
       const data = await response.json();
@@ -67,9 +66,13 @@ function Weather() {
 
   return (
     <div className="main-container">
-      <div className="weather">
+      <div className="weather" style={{
+        width: window.innerWidth < 405 ? "95%" : "auto",
+      }}>
         <div className="search-bar">
-          <input ref={inputRef} type="text" placeholder="Search" />
+          <input ref={inputRef} type="text" placeholder="Search" style={{
+            width: window.innerWidth < 405 ? "80%" : "auto",
+          }} />
           <img
             className="search_icon"
             src={searchh}
@@ -82,7 +85,9 @@ function Weather() {
             <img src={weatherData.icon} alt="" className="weather-icon" />
             <p className="tempreature">{weatherData.tempreature}°</p>
             <p className="location">{weatherData.location}</p>
-            <div className="weather-data">
+            <div className="weather-data" style={{
+              
+            }}>
               <div className="col">
                 <img className="humidity_icon" src={humidity1} alt="" />
                 <div>
